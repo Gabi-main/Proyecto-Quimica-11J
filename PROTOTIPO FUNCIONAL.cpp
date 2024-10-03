@@ -16,11 +16,11 @@ class elementocuantico {
 		ml = ml_valor;
 		ms = ms_valor;
 	}
-	//este será lo que se va a imprimir al final, por eso está en void
+	//este serÃ¡ lo que se va a imprimir al final, por eso estÃ¡ en void
 	void datos_cuanticos(){
 		cout << "nombre" << nombre << endl;
 		cout << "configuracion electronica" << configuracion << endl;
-		cout << "números cuanticos"<< 
+		cout << "nÃºmeros cuanticos"<< 
 		"       n:" << n <<
 		"       l:" << l <<
 		"       ml:" << ml << 
@@ -52,9 +52,9 @@ class atomico {
 			//void para imprimir valores atomicos
 		void imprimir_valores_atomicos (){
 		cout << "Elemento: " << elemento << endl;
-        cout << "Número Atómico: " << num_atomico << endl;
-        cout << "Masa Atómica: " << masa << " u" << endl;
-        cout << "Radio Atómico: " << radio_atomico << " pm" << endl;
+        cout << "NÃºmero AtÃ³mico: " << num_atomico << endl;
+        cout << "Masa AtÃ³mica: " << masa << " u" << endl;
+        cout << "Radio AtÃ³mico: " << radio_atomico << " pm" << endl;
         cout << "Protones: " << protones << endl;
         cout << "Neutrones: " << neutrones << endl;
         cout << "Electrones: " << electrones << endl;
@@ -68,21 +68,21 @@ int main (){
 //crear el vector vector<LA CLASE> y la subclase ;
 // para crear un elemento en la subclase es LA SUBCLASE.push_back(LA CLASE PRINCIPAL(ya va el nombre y los numeros n l ml ms
 vector <elementocuantico> elemento;
-elemento.push_back(elementocuantico("oxígeno" ,"1s2 2s2 2p4",2, 1, 0, -1));
-elemento.push_back(elementocuantico("Hidrógeno", "1s1", 1, 0, 0, 1));
+elemento.push_back(elementocuantico("oxÃ­geno" ,"1s2 2s2 2p4",2, 1, 0, -1));
+elemento.push_back(elementocuantico("HidrÃ³geno", "1s1", 1, 0, 0, 1));
 elemento.push_back(elementocuantico("Helio", "1s2", 1, 0, 0, -1));
-elemento.push_back(elementocuantico("Nitrógeno", "1s2 2s2 2p3", 2, 1, -1, 1));
+elemento.push_back(elementocuantico("NitrÃ³geno", "1s2 2s2 2p3", 2, 1, -1, 1));
 
 //aqui seria despues de definir cada elemento para la clase anterior ahora hay que definir esta clase( los 118)}
 vector <atomico> elementos;
-elementos.push_back(atomico("hidrógeno", 1, 1.008, 53, 1, 0, 1));
+elementos.push_back(atomico("hidrÃ³geno", 1, 1.008, 53, 1, 0, 1));
 elementos.push_back(atomico("helio", 2, 4.002602, 31, 2, 2, 2));
 elementos.push_back(atomico("oxigeno", 8, 15.999, 73, 8, 8, 8));
 elementos.push_back(atomico("carbono", 6, 12.011, 70, 6, 6, 6));
 elementos.push_back(atomico("nitrogeno", 7, 14.007, 65, 7, 7, 7));
 int opcion;
 	do {
-		//menú
+		//menÃº
 		cout <<" menu"<< endl;
 		cout << "opciones"<< endl;
 		cout<< "1- calculo de cuantico a elemento"<< endl;
@@ -91,14 +91,14 @@ int opcion;
 		cin >> opcion;
 		
 		switch (opcion) { 
-		//caso 1 del menú
+		//caso 1 del menÃº
 		case 1 : {
 		
 			//crear variables q pediremos
 			int n, l, ml, ms;
 			//pedir variables y definir valor
 			cout<<"introduce numeros cuanticos n, l , ml, ms"<< endl;
-			cout<<"número cuantico principal(n)"; cin >> n;
+			cout<<"nÃºmero cuantico principal(n)"; cin >> n;
 			cout<< "l"; cin >> l;
 			cout << "ml"; cin >>ml;
 			cout << "ms"; cin >> ms;
@@ -114,7 +114,7 @@ int opcion;
 				}
 			}
 			if (encontrar== false) {
-				cout << "no se encontró elemento con esos números, intentalo otra vez"<< endl;
+				cout << "no se encontrÃ³ elemento con esos nÃºmeros, intentalo otra vez"<< endl;
 		}
 			
 			break;
@@ -122,7 +122,7 @@ int opcion;
 			case 2 : {
 				
 			string elemento;
-			cout << "¿que elemento desea saber sus datos?"; cin >> elemento;
+			cout << "Â¿que elemento desea saber sus datos?"; cin >> elemento;
 			
 			bool encontrado = false;
 			for (size_t i = 0 ; i <elementos.size(); i++){
@@ -143,7 +143,7 @@ int opcion;
 		}
 		
 		default : {
-			cout << "ingresa opcion válida" << endl;
+			cout << "ingresa opcion vÃ¡lida" << endl;
 			break;
 		}
 			
